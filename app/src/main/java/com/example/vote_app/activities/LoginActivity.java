@@ -91,11 +91,11 @@ private FirebaseAuth mAuth;
                 mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        Intent iNext;
+
                    if (task.isSuccessful()){
 
                        verifyEmail();
-                       iNext = new Intent(poll.this);
+
 
                    }else {
                        Toast.makeText(LoginActivity.this, "User not found", Toast.LENGTH_SHORT).show();
